@@ -7,18 +7,13 @@ main section.categories-show {
     justify-content: space-around;
 
     .product {
-      // flex:      1;
       max-width: 260px;
-      // so that footer within can be positioned absolutely
       position: relative;
-
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 15px;
       padding-bottom: 80px;
       margin-top: 20px;
-      // margin:        10px;
-
       header img {
         max-width: 100%;
         max-height: 140px;
@@ -105,6 +100,34 @@ main section.products-show {
 
   &__count {
     font-size: 56px;
+    color: #fff;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: -webkit-linear-gradient(-40deg, #df26f9, #6d00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-links {
+  width: max-content;
+  top: 0;
+  right: 0;
+  margin: 0px 18px 0px 0px;
+  padding: 15px 20px;
+  color: #fff;
+  background: rgb(223, 38, 249);
+  background: linear-gradient(140deg, #df26f9 0%, #6d00ff 100%);
+  & a,
+  & a:visited {
     color: #fff;
   }
 }
