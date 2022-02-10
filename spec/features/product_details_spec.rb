@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "HomePages", type: :feature do
+RSpec.feature "ProductDetails", type: :feature, js:true  do
 
   # SETUP
   before :each do
@@ -16,15 +16,16 @@ RSpec.feature "HomePages", type: :feature do
       )
     end
   end
+
   scenario "They see all products" do
     # ACT
     visit root_path
+    page.find('.products').first(:link, "Details").click
 
     # DEBUG / VERIFY
-    save_screenshot
 
     #VERIFY
-    expect(page).to have_css 'article.product', count: 10
+    expect(page).to have_css '.product-detail', count: 1
+    save_screenshot
   end
-
 end
